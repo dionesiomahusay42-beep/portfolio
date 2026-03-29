@@ -35,7 +35,7 @@ OWNER = {
     # 1. Upload your photo to any image hosting site (e.g. imgur.com)
     # 2. Copy the direct image URL and paste it below
     # Example: "profile_photo": "https://i.imgur.com/yourphoto.jpg",
-    "profile_photo": "https://imgur.com/a/5rHZp4O",
+    "profile_photo": "/static/images/donnie(2).jpg",
 }
 
 SKILLS = [
