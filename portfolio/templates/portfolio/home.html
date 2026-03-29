@@ -37,16 +37,15 @@
 
       <div class="col-lg-5 d-flex justify-content-center" data-aos="right">
         <div class="hero-avatar-wrap">
-          {% if owner.profile_photo %}
-            <img src="{{ owner.profile_photo }}" alt="{{ owner.name }}" class="hero-avatar-img" />
-          {% else %}
-            <div class="hero-avatar-initials">
-              {{ owner.name|slice:":1" }}
-            </div>
-          {% endif %}
+          <img src="{% static 'images/profile.png' %}"
+               alt="{{ owner.name }}"
+               class="hero-avatar-img"
+               onerror="this.style.display='none';document.getElementById('initials-fallback').style.display='flex';" />
+          <div id="initials-fallback" class="hero-avatar-initials" style="display:none;">
+            {{ owner.name|slice:":1" }}
+          </div>
           <div class="avatar-ring ring-1"></div>
           <div class="avatar-ring ring-2"></div>
-          <!-- Floating tags -->
           <div class="float-tag tag-python"><i class="bi bi-filetype-py"></i> Python</div>
           <div class="float-tag tag-django"><i class="bi bi-braces"></i> Django</div>
           <div class="float-tag tag-git"><i class="bi bi-git"></i> Git</div>

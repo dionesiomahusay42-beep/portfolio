@@ -9,14 +9,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-change-this-in-production-use-env-variable'
 
-DEBUG = False
+# True for local development, False for PythonAnywhere production
+DEBUG =False
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'dionesiomahusay.pythonanywhere.com',
-    # Replace with your actual PythonAnywhere username:
-    # 'your_username.pythonanywhere.com',
 ]
 
 INSTALLED_APPS = [
@@ -89,10 +88,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings (for contact form)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# For production, replace with:
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'your_email@gmail.com'
-# EMAIL_HOST_PASSWORD = 'your_app_password'
