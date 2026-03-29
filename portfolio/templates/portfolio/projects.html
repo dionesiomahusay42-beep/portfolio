@@ -1,0 +1,47 @@
+{% extends "portfolio/base.html" %}
+{% block title %}Projects | {{ owner.name }}{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">What I've Built</span>
+    <h1 class="page-hero-title">Projects</h1>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div class="row g-4">
+      {% for project in projects %}
+      <div class="col-md-6">
+        <div class="project-card-full">
+          <div class="project-card-header">
+            <span class="project-emoji-lg">{{ project.emoji }}</span>
+            <h3 class="project-title-lg">{{ project.title }}</h3>
+          </div>
+          <p class="project-desc-full">{{ project.description }}</p>
+          <div class="project-tech mb-3">
+            {% for t in project.tech %}
+            <span class="tech-badge">{{ t }}</span>
+            {% endfor %}
+          </div>
+          <div class="project-links">
+            {% if project.github %}
+            <a href="{{ project.github }}" target="_blank" class="proj-link">
+              <i class="bi bi-github"></i> View on GitHub
+            </a>
+            {% endif %}
+            {% if project.live %}
+            <a href="{{ project.live }}" target="_blank" class="proj-link live">
+              <i class="bi bi-box-arrow-up-right"></i> Live Demo
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

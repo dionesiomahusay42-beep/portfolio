@@ -1,0 +1,30 @@
+{% extends "portfolio/base.html" %}
+{% block title %}Education | {{ owner.name }}{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Academic Background</span>
+    <h1 class="page-hero-title">Education</h1>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div class="timeline">
+      {% for edu in education %}
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-year">{{ edu.year }}</span>
+          <h3 class="timeline-degree">{{ edu.degree }}</h3>
+          <h4 class="timeline-school"><i class="bi bi-building me-2"></i>{{ edu.school }}</h4>
+          <p class="timeline-desc">{{ edu.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends "portfolio/base.html" %}
+{% block title %}Skills | {{ owner.name }}{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Technical Proficiency</span>
+    <h1 class="page-hero-title">My Skills</h1>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+
+    {% if backend %}
+    <div class="skills-category mb-5">
+      <h2 class="skills-cat-title"><i class="bi bi-server me-2"></i>Backend</h2>
+      <div class="skills-list">
+        {% for skill, pct in backend %}
+        <div class="skill-row">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill }}</span>
+            <span class="skill-pct-label">{{ pct }}%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill animated" style="--target-width: {{ pct }}%"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if frontend %}
+    <div class="skills-category mb-5">
+      <h2 class="skills-cat-title"><i class="bi bi-palette me-2"></i>Frontend</h2>
+      <div class="skills-list">
+        {% for skill, pct in frontend %}
+        <div class="skill-row">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill }}</span>
+            <span class="skill-pct-label">{{ pct }}%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill animated" style="--target-width: {{ pct }}%"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if database %}
+    <div class="skills-category mb-5">
+      <h2 class="skills-cat-title"><i class="bi bi-database me-2"></i>Databases</h2>
+      <div class="skills-list">
+        {% for skill, pct in database %}
+        <div class="skill-row">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill }}</span>
+            <span class="skill-pct-label">{{ pct }}%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill animated" style="--target-width: {{ pct }}%"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if tools %}
+    <div class="skills-category mb-5">
+      <h2 class="skills-cat-title"><i class="bi bi-tools me-2"></i>Tools & DevOps</h2>
+      <div class="skills-list">
+        {% for skill, pct in tools %}
+        <div class="skill-row">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill }}</span>
+            <span class="skill-pct-label">{{ pct }}%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill animated" style="--target-width: {{ pct }}%"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Animate skill bars when they enter viewport
+const bars = document.querySelectorAll('.skill-bar-fill.animated');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.width = e.target.style.getPropertyValue('--target-width');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+bars.forEach(b => { b.style.width = '0'; observer.observe(b); });
+</script>
+{% endblock %}
