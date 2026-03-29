@@ -14,7 +14,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'dionesio_mahusay.pythonanywhere.com',
+    'dionesiomahusay.pythonanywhere.com',
     # Replace with your actual PythonAnywhere username:
     # 'your_username.pythonanywhere.com',
 ]
