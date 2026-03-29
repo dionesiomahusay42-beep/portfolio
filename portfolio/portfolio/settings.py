@@ -9,12 +9,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-change-this-in-production-use-env-variable'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'firstname_lastname.pythonanywhere.com',
+    'dionesio_mahusay.pythonanywhere.com',
     # Replace with your actual PythonAnywhere username:
     # 'your_username.pythonanywhere.com',
 ]
