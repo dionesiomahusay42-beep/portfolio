@@ -8,110 +8,129 @@ from .forms import ContactForm
 # Edit all values below to personalize your portfolio
 
 OWNER = {
-    "name": "Dionesio Mahusay Jr.",
-    "tagline": "Full-Stack Developer · Problem Solver · Tech Enthusiast",
-    "short_bio": "Hi! I'm a passionate developer based in the Philippines, "
-                 "building web applications that make an impact.",
+    "name": "Dionesio Mahusay",
+    "tagline": "IT Student · Web Developer · Hardware Technician",
+    "short_bio": "Hi! I'm a 3rd year BSIT student based in the Philippines, "
+                 "passionate about building systems that solve real-world problems.",
     "about": (
-        "I'm a Computer Science graduate with a deep love for backend systems "
-        "and clean, maintainable code. Over the years I've worked with Python, "
-        "Django, JavaScript, and a handful of cloud platforms. I enjoy turning "
-        "complex business problems into elegant software solutions and am always "
-        "eager to learn new technologies."
+        "I am a 3rd year college student taking Bachelor of Science in Information "
+        "Technology. I have a strong interest in both software development and hardware "
+        "systems. I enjoy building practical applications using Java, Python, and Django, "
+        "and I also have hands-on experience in hardware installation, troubleshooting, "
+        "and repair. I am always eager to learn new technologies and apply them to "
+        "create solutions that make a difference."
     ),
     "career_goals": (
-        "My goal is to grow into a senior full-stack engineer and eventually "
-        "lead engineering teams that ship products people genuinely love. "
-        "I'm especially interested in SaaS products, developer tooling, and "
-        "anything that improves developer experience."
+        "My goal is to become a well-rounded IT professional who can handle both "
+        "software development and hardware systems. I aspire to work on enterprise-level "
+        "applications, contribute to meaningful projects, and eventually lead a team of "
+        "developers. I am especially interested in system development, database management, "
+        "and network infrastructure."
     ),
-    "email": "yourname@email.com",
-    "github": "https://github.com/yourusername",
-    "linkedin": "https://linkedin.com/in/yourusername",
-    "twitter": "https://twitter.com/yourusername",
-    "profile_photo": None,   # Set to a URL string or leave None for initials avatar
+    "email": "dionesiomahusay42@gmail.com",
+    "github": "https://github.com/dionesiomahusay42-beep",
+    "linkedin": "",
+    "twitter": "",
+    # To add your photo:
+    # 1. Upload your photo to any image hosting site (e.g. imgur.com)
+    # 2. Copy the direct image URL and paste it below
+    # Example: "profile_photo": "https://i.imgur.com/yourphoto.jpg",
+    "profile_photo": "https://imgur.com/a/5rHZp4O",
 }
 
 SKILLS = [
     # (skill_name, proficiency_percent, category)
-    ("Python",          90, "backend"),
-    ("Django",          85, "backend"),
-    ("JavaScript",      75, "frontend"),
-    ("HTML & CSS",      80, "frontend"),
-    ("PostgreSQL",      70, "database"),
-    ("SQLite",          75, "database"),
-    ("Git & GitHub",    85, "tools"),
-    ("REST APIs",       80, "backend"),
-    ("Bootstrap",       70, "frontend"),
-    ("Linux / CLI",     65, "tools"),
-    ("Docker",          55, "tools"),
-    ("PythonAnywhere",  80, "tools"),
+    # Backend
+    ("Python",                      80, "backend"),
+    ("Django",                      75, "backend"),
+    ("Java",                        85, "backend"),
+    ("REST APIs",                   70, "backend"),
+    # Frontend
+    ("HTML & CSS",                  80, "frontend"),
+    ("JavaScript",                  70, "frontend"),
+    ("Bootstrap",                   75, "frontend"),
+    # Database
+    ("MySQL",                       85, "database"),
+    ("Database Design",             80, "database"),
+    # Tools
+    ("Git & GitHub",                75, "tools"),
+    ("PythonAnywhere",              70, "tools"),
+    ("NetBeans / Eclipse",          80, "tools"),
+    # Hardware
+    ("Hardware Installation",       90, "hardware"),
+    ("Hardware Troubleshooting",    90, "hardware"),
+    ("PC Assembly & Repair",        90, "hardware"),
+    ("Network Setup",               80, "hardware"),
+    ("OS Installation",             85, "hardware"),
 ]
 
 PROJECTS = [
     {
+        "title": "Hotel Management System",
+        "description": (
+            "A comprehensive hotel management system that handles room reservations, "
+            "guest check-in and check-out, billing, and room availability tracking. "
+            "Designed to streamline hotel operations and improve guest experience."
+        ),
+        "tech": ["Java", "MySQL", "NetBeans", "JDBC"],
+        "github": "",
+        "live": None,
+        "emoji": "🏨",
+    },
+    {
+        "title": "Inventory System",
+        "description": (
+            "A Java-based inventory management system that tracks stock levels, "
+            "manages product records, generates reports, and sends alerts for "
+            "low-stock items. Built to help businesses manage their inventory efficiently."
+        ),
+        "tech": ["Java", "MySQL", "NetBeans", "JDBC"],
+        "github": "",
+        "live": None,
+        "emoji": "📦",
+    },
+    {
+        "title": "Santa Catalina Parking & Ticketing System",
+        "description": (
+            "A parking and ticketing system developed for Santa Catalina that manages "
+            "vehicle entry and exit, generates parking tickets, computes fees based on "
+            "duration, and maintains a log of all parking transactions."
+        ),
+        "tech": ["Java", "MySQL", "NetBeans", "JDBC"],
+        "github": "",
+        "live": None,
+        "emoji": "🅿️",
+    },
+    {
         "title": "Personal Portfolio Website",
         "description": (
-            "A responsive portfolio website built with Django and deployed "
-            "on PythonAnywhere. Features a contact form, dynamic project "
-            "listings, and a clean modern design."
+            "A responsive personal portfolio website built with Python and Django, "
+            "deployed on PythonAnywhere. Features sections for skills, projects, "
+            "education, and a working contact form."
         ),
         "tech": ["Python", "Django", "HTML/CSS", "Bootstrap", "SQLite"],
-        "github": "https://github.com/yourusername/portfolio",
-        "live": "https://firstname_lastname.pythonanywhere.com",
+        "github": "https://github.com/dionesiomahusay42-beep/portfolio",
+        "live": "https://dionesiomahusay.pythonanywhere.com",
         "emoji": "🌐",
-    },
-    {
-        "title": "Task Management API",
-        "description": (
-            "A RESTful API built with Django REST Framework that allows users "
-            "to create, update, and track tasks. Includes JWT authentication "
-            "and full CRUD operations."
-        ),
-        "tech": ["Python", "Django REST Framework", "JWT", "PostgreSQL"],
-        "github": "https://github.com/dionesiomahusay42-beep/task-api",
-        "live": None,
-        "emoji": "✅",
-    },
-    {
-        "title": "Weather Dashboard",
-        "description": (
-            "A weather app that fetches real-time data from the OpenWeatherMap "
-            "API and displays forecasts, humidity, and wind speed for any city "
-            "in the world. Built with vanilla JavaScript and Django backend."
-        ),
-        "tech": ["JavaScript", "Python", "Django", "OpenWeatherMap API", "CSS"],
-        "github": "https://github.com/yourusername/weather-dashboard",
-        "live": None,
-        "emoji": "🌤️",
-    },
-    {
-        "title": "Blog Platform",
-        "description": (
-            "A full-featured blog platform with user authentication, rich text "
-            "editing, categories, tags, and a comment system. Supports Markdown "
-            "content and is fully mobile-responsive."
-        ),
-        "tech": ["Python", "Django", "Markdown", "SQLite", "Bootstrap"],
-        "github": "https://github.com/dionesiomahusay42-beep/blog-platform",
-        "live": None,
-        "emoji": "📝",
     },
 ]
 
 EDUCATION = [
     {
-        "school": "University of the Philippines",
-        "degree": "Bachelor of Science in Computer Science",
-        "year": "2020 – 2024",
-        "description": "Graduated with honors. Relevant coursework: Data Structures, "
-                       "Algorithms, Web Development, Database Systems, Software Engineering.",
+        "school": "NEGROS ORIENTAL STATES UNIVERSITY",  # ← Replace with your school name
+        "degree": "Bachelor of Science in Information Technology",
+        "year": "2026 – Present",
+        "description": (
+            "Currently in 3rd year. Relevant coursework includes: Data Structures, "
+            "Web Development, Database Management Systems, Object-Oriented Programming, "
+            "Computer Hardware Servicing, and Systems Analysis and Design."
+        ),
     },
     {
-        "school": "NEGROS OCCIDENTAL HIGH SCHOOL",
-        "degree": "Senior High School – CSS Strand",
-        "year": "2018 – 2020",
-        "description": "Completed the Science, Technology, Engineering, and Mathematics strand.",
+        "school": "NEGROS OCCIDENTAL HIGHSCHOOL",   # ← Replace with your SHS name
+        "degree": "Senior High School",
+        "year": "2020 – 2022",
+        "description": "Completed Senior High School education.",
     },
 ]
 # ──────────────────────────────────────────────────────────────────────────────
@@ -132,10 +151,12 @@ def skills(request):
     frontend = [(s, p) for s, p, c in SKILLS if c == "frontend"]
     database = [(s, p) for s, p, c in SKILLS if c == "database"]
     tools    = [(s, p) for s, p, c in SKILLS if c == "tools"]
+    hardware = [(s, p) for s, p, c in SKILLS if c == "hardware"]
     context  = {
         "owner": OWNER,
         "backend": backend, "frontend": frontend,
         "database": database, "tools": tools,
+        "hardware": hardware,
         "all_skills": SKILLS,
     }
     return render(request, "portfolio/skills.html", context)
