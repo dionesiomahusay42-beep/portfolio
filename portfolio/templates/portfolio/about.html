@@ -1,4 +1,5 @@
 {% extends "portfolio/base.html" %}
+{% load static %}
 {% block title %}About | {{ owner.name }}{% endblock %}
 {% block content %}
 
@@ -15,11 +16,13 @@
 
       <div class="col-lg-4 text-center">
         <div class="about-avatar-wrap">
-          {% if owner.profile_photo %}
-            <img src="{{ owner.profile_photo }}" alt="{{ owner.name }}" class="about-avatar-img" />
-          {% else %}
-            <div class="about-avatar-initials">{{ owner.name|slice:":1" }}</div>
-          {% endif %}
+          <img src="{% static 'images/profile.png' %}"
+               alt="{{ owner.name }}"
+               class="about-avatar-img"
+               onerror="this.style.display='none';document.getElementById('about-initials').style.display='flex';" />
+          <div id="about-initials" class="about-avatar-initials" style="display:none;">
+            {{ owner.name|slice:":1" }}
+          </div>
         </div>
         <h2 class="about-name mt-4">{{ owner.name }}</h2>
         <p class="about-tagline">{{ owner.tagline }}</p>
