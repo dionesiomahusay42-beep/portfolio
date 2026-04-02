@@ -1,3 +1,7 @@
+"""
+Django settings for portfolio project.
+"""
+
 from pathlib import Path
 import os
 
@@ -5,7 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-change-this-in-production-use-env-variable'
 
-DEBUG = True  # Set False on PythonAnywhere
+# True for local development, False for PythonAnywhere production
+DEBUG =False
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -81,17 +86,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ── Email Configuration (Gmail) ────────────────────────────────
-# To receive emails from the contact form:
-# 1. Use your Gmail account below
-# 2. Go to Google Account → Security → 2-Step Verification → ON
-# 3. Then go to App Passwords → create one for "Mail"
-# 4. Paste that 16-character App Password as EMAIL_HOST_PASSWORD
-
-EMAIL_BACKEND       = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST          = 'smtp.gmail.com'
-EMAIL_PORT          = 587
-EMAIL_USE_TLS       = True
-EMAIL_HOST_USER     = 'dionesiomahusay42@gmail.com'   # ← Your Gmail
-EMAIL_HOST_PASSWORD = 'your-16-char-app-password'      # ← Gmail App Password
-DEFAULT_FROM_EMAIL  = EMAIL_HOST_USER
+# Email settings (for contact form)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
