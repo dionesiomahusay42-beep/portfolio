@@ -16,7 +16,7 @@ OWNER = {
         "I am a 3rd year college student taking Bachelor of Science in Information "
         "Technology. I have a strong interest in both software development and hardware "
         "systems. I enjoy building practical applications using Java, Python, and Django, "
-        "and I also have hands-on experience in hardware installatioSn, troubleshooting, "
+        "and I also have hands-on experience in hardware installation, troubleshooting, "
         "and repair. I am always eager to learn new technologies and apply them to "
         "create solutions that make a difference."
     ),
@@ -139,7 +139,6 @@ EDUCATION = [
 def home(request):
     context = {"owner": OWNER, "skills": SKILLS[:6], "projects": PROJECTS[:3]}
     return render(request, "portfolio/home.html", context)
-
 
 def about(request):
     context = {"owner": OWNER}
